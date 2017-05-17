@@ -25,7 +25,7 @@ else:
             from Pyrex.Compiler.Main import CompilationOptions, default_options
             options = CompilationOptions(default_options)
             result = Pyrex.Compiler.Main.compile(source, options)
-            if result.num_errors <> 0:
+            if result.num_errors != 0:
                 sys.exit(1)
     distutils_extras = {
         "cmdclass": {

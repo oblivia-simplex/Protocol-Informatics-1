@@ -1,9 +1,9 @@
 all:
-	python setup.py build
-	find build -name align.so | xargs -J % cp % PI
+	python2 setup.py build
+	find build -name align.so | xargs -I % cp % PI
 
 install:
-	python setup.py install
+	python2 setup.py install
 
 clean:
 	find . -name "*.pyc" | xargs rm -f
